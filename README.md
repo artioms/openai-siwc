@@ -362,7 +362,7 @@ Register the global OpenAI dynamic secret:
 ```bash
 sbx secret set openai \
   --command '/opt/homebrew/bin/openai-siwc sbx-secret' \
-  --refresh 55m
+  --refresh 30s
 ```
 
 
@@ -382,6 +382,10 @@ The --command option tells SBX to execute openai-siwc sbx-secret on the host.
 The command returns the current access token through standard output.
 
 SBX manages the dynamic secret and caches its value according to the configured refresh policy.
+
+#### Secret refresh interval
+
+Set `--refresh 30s` when registering the OpenAI secret. SBX caches the command output for this interval before resolving the secret again. This is a cache interval; it does not force an OAuth token refresh every 30 seconds.
 
 You can inspect configured secrets with:
 
