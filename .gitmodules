@@ -1,0 +1,3 @@
+[submodule "sign-in-with-chatgpt-devkit"]
+	path = sign-in-with-chatgpt-devkit
+	url = https://github.com/artioms/sign-in-with-chatgpt-devkit.git

@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+/dist/
+/sign-in-with-chatgpt-devkit/**/dist/
+
+# Logs and runtime files
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# TypeScript incremental build artifacts
+*.tsbuildinfo
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo

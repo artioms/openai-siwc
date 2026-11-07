@@ -1,0 +1,36 @@
+{
+  "name": "openai-siwc",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "openai-siwc": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p sign-in-with-chatgpt-devkit/packages/local/tsconfig.json && node sign-in-with-chatgpt-devkit/scripts/copy-package-notices.mjs sign-in-with-chatgpt-devkit/packages/local/dist && tsc",
+    "dev": "tsx src/cli.ts",
+    "login": "tsx src/cli.ts login",
+    "status": "tsx src/cli.ts status",
+    "models": "tsx src/cli.ts models",
+    "logout": "tsx src/cli.ts logout"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "private": "true",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@siwc/local": "file:sign-in-with-chatgpt-devkit/packages/local",
+    "commander": "^15.0.0",
+    "keytar": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/proper-lockfile": "^4.1.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
