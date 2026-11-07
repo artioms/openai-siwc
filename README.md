@@ -416,8 +416,6 @@ Create spec.yaml:
 # syntax=docker/sandbox-kit:3
 schemaVersion: "3"
 kind: workload
-```
-
 displayName: Pi Coding Agent
 description: Pi coding agent sandbox with ChatGPT OAuth
 version: "1.0.0"
@@ -464,6 +462,7 @@ capabilities:
           - auth.openai.com:443
           - chatgpt.com:443
           - api.openai.com:443
+```
 
 ### Step 4. Create the Dockerfile
 
@@ -471,7 +470,6 @@ Create spec.dockerfile:
 
 ```dockerfile
 FROM docker/sandbox-templates:shell
-```
 
 USER root
 
@@ -484,6 +482,7 @@ WORKDIR /home/agent/workspace
 
 ENTRYPOINT ["pi"]
 CMD []
+```
 
 ### Step 5. Build and run the sandbox
 
